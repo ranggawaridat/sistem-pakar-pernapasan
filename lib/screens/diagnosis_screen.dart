@@ -38,7 +38,10 @@ class _DiagnosisScreenState extends State<DiagnosisScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => ResultScreen(diagnosisResult: result),
+            builder: (context) => ResultScreen(
+              diagnosisResult: result,
+              selectedSymptoms: List<String>.from(_selectedSymptoms),
+            ),
           ),
         );
       }
